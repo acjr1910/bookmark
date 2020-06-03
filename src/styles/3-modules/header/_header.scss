@@ -1,0 +1,19 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+  &__menu-nav {
+    @media (max-width: $screen-tablet) {
+      display: none;
+    }
+    &--show {
+      display: block;
+    }
+  }
+  &__menu-image {
+    @media (min-width: $screen-desktop) {
+      display: none;
+    }
+  }
+}
