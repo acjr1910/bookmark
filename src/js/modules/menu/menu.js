@@ -3,18 +3,25 @@ const menu = (function menuBehavior() {
     isOpen: false,
   };
   const menuElement = document.querySelector('.header__menu-image');
-  const menuNavElement = document.querySelector('.header__menu-nav');
+  const headerElement = document.querySelector('.header');
+
+  function changeMenuIconSrc() {
+    const src = state.isOpen
+      ? 'images/icon-hamburger.svg'
+      : 'images/icon-close.svg';
+    return menuElement && (menuElement.attributes.src.value = src);
+  }
 
   function toggleClass() {
-    const elementClass = state.isOpen
-      ? 'header__menu-nav--show'
-      : 'header__menu-nav';
-    return menuNavElement && (menuNavElement.classList.value = elementClass);
+    const elementClass = state.isOpen ? 'header' : 'header header--show-menu';
+    return headerElement && (headerElement.classList.value = elementClass);
   }
 
   function toggleIsOpen() {
     Object.assign({}, state, (state.isOpen = !state.isOpen));
-    return toggleClass();
+    changeMenuIconSrc();
+    toggleClass();
+    return;
   }
 
   function addClickListener() {
