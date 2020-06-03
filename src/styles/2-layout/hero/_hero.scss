@@ -1,0 +1,12 @@
+.hero {
+  margin: 3rem 0;
+
+  &__button-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  &__image-container {
+    margin-bottom: 3rem;
+  }
+}
