@@ -43,3 +43,10 @@ body {
   font-family: 'Rubik', sans-serif;
 }
 // Font:end
+
+a,
+button,
+nav li,
+.header__logo-container {
+  cursor: pointer;
+}

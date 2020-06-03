@@ -1,6 +1,9 @@
 .l-grid-container {
   display: grid;
   grid-template-columns: 6.5% repeat(4, 1fr) 6.5%;
+  @media (min-width: $screen-desktop) {
+    grid-template-columns: 8.5% repeat(4, 1fr) 8.5%;
+  }
 }
 
 .header {
