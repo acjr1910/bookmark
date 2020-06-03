@@ -26,6 +26,7 @@
       opacity: 0;
       display: flex;
       position: fixed;
+      z-index: 2;
       background: $very-dark-blue-menu-alpha;
       color: white;
       top: 0;

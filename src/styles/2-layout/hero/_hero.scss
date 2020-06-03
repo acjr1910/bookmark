@@ -1,5 +1,6 @@
 .hero {
   margin: 3rem 0;
+  overflow: hidden;
 
   &__button-container {
     display: flex;
@@ -8,5 +9,21 @@
   }
   &__image-container {
     margin-bottom: 3rem;
+    position: relative;
+    &:after {
+      content: '';
+      width: 600px;
+      height: 201px;
+      overflow: hidden;
+      position: absolute;
+      top: 68px;
+      left: 64px;
+      border-radius: 120px;
+      background-color: $soft-blue;
+    }
+  }
+  &__image {
+    position: relative;
+    z-index: 1;
   }
 }
