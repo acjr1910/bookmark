@@ -15,3 +15,12 @@
 .main {
   grid-column: 1 / -1;
 }
+
+.container {
+  margin: 1.5rem 0;
+  overflow: hidden;
+}
+
+.container.container-features {
+  margin: 7.5rem 0 1.5rem;
+}

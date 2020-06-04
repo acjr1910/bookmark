@@ -51,19 +51,31 @@ nav li,
   cursor: pointer;
 }
 
-h1 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-align: center;
-  font-size: 1.585rem;
   line-height: 2.5rem;
   font-weight: 500;
-  margin: 1rem;
+  margin: 0.5rem 0;
   color: $very-dark-blue;
+}
+
+h1 {
+  font-size: 1.585rem;
+}
+
+h2 {
+  font-size: 1.375rem;
 }
 
 p {
   font-size: 0.875rem;
   text-align: center;
   line-height: 1.375rem;
-  margin: 1rem 0 1.5rem;
+  margin: 0.5rem 6.5% 1.5rem;
   color: $grayish-blue;
 }

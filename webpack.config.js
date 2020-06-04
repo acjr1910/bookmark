@@ -9,7 +9,7 @@ module.exports = {
   entry: './src/js/index.js',
   devServer: {
     open: 'http://localhost:3000',
-    port: 3000,
+    port: 9000,
   },
   module: {
     rules: [

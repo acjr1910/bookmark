@@ -11,6 +11,10 @@
   &--show-menu &__logo-image {
     filter: invert(1) grayscale(1) contrast(10) saturate(70);
   }
+  &--show-menu &__nav-list-item,
+  &--show-menu &__nav-list-item--login {
+    display: block;
+  }
 
   &__logo-container {
     position: relative;
@@ -19,7 +23,7 @@
   }
 
   &__menu-nav {
-    transition: opacity 0.2s, height 0.5s ease;
+    transition: opacity 0.3s, height 0.3s ease-in-out;
     @media (max-width: $screen-tablet) {
       display: flex;
       height: 0;
@@ -47,6 +51,7 @@
   }
   &__nav-list-item,
   &__nav-list-item--login {
+    display: none;
     padding: 1.2rem 0;
     text-transform: uppercase;
     text-align: center;
