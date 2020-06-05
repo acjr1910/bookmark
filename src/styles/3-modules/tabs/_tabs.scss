@@ -1,0 +1,32 @@
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  &__item {
+    flex-basis: 100%;
+    text-align: center;
+    padding: 0.895rem 0;
+    color: $very-dark-blue;
+    border-bottom: 1px solid $grayish-blue-menu-alpha;
+    &:first-child {
+      border-top: 1px solid $grayish-blue-menu-alpha;
+    }
+    &:last-child {
+      border-bottom: 1px solid $grayish-blue-menu-alpha;
+    }
+
+    &--active {
+      position: relative;
+    }
+    &--active:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      height: 4px;
+      width: 40%;
+      background-color: $soft-red;
+      transform: translate3d(-50%, 0px, 0px);
+    }
+  }
+}

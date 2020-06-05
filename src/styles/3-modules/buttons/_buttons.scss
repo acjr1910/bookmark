@@ -1,4 +1,4 @@
-.button-default {
+.button {
   background: $soft-blue;
   border: none;
   border-radius: 5px;
@@ -7,4 +7,15 @@
   font-family: 'Rubik', sans-serif;
   font-weight: 500;
   box-shadow: $shadow-props $button-shadow;
+  margin: 1rem 0;
+}
+
+.button-default {
+  background: $soft-blue;
+  color: white;
+}
+
+.button-secondary {
+  background: #f7f7f7;
+  color: $grayish-blue;
 }

@@ -1,0 +1,27 @@
+.background-left {
+  &:after {
+    content: '';
+    width: 600px;
+    height: 200px;
+    overflow: hidden;
+    position: absolute;
+    bottom: 148px;
+    right: 64px;
+    border-radius: 120px;
+    background-color: $soft-blue;
+  }
+}
+
+.background-right {
+  &:after {
+    content: '';
+    width: 600px;
+    height: 201px;
+    overflow: hidden;
+    position: absolute;
+    top: 68px;
+    left: 64px;
+    border-radius: 120px;
+    background-color: $soft-blue;
+  }
+}
