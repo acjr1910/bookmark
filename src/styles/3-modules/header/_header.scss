@@ -59,6 +59,7 @@
     letter-spacing: 0.25rem;
     border-bottom: 1px solid $grayish-blue-menu-alpha;
     @media (min-width: $screen-desktop) {
+      display: flex;
       padding: 0;
       border: none;
       margin: 0 0 0 2rem;

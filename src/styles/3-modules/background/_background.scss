@@ -1,11 +1,12 @@
 .background-left {
+  position: relative;
   &:after {
     content: '';
     width: 600px;
     height: 200px;
     overflow: hidden;
     position: absolute;
-    bottom: 148px;
+    top: 36px;
     right: 64px;
     border-radius: 120px;
     background-color: $soft-blue;
