@@ -1,16 +1,6 @@
+@import './l-grid/l-grid';
 @import './hero/hero';
-
-.l-grid-container {
-  display: grid;
-  grid-template-columns: 6.5% repeat(4, 1fr) 6.5%;
-  @media (min-width: $screen-desktop) {
-    grid-template-columns: 8.5% repeat(4, 1fr) 8.5%;
-  }
-}
-
-.l-grid-column {
-  grid-column: 2 / 6;
-}
+@import './tab-content/tab-content';
 
 .header {
   grid-column: 2 / 6;
@@ -18,8 +8,4 @@
 
 .main {
   grid-column: 1 / -1;
-}
-
-.tab-content {
-  margin: 1rem 0;
 }

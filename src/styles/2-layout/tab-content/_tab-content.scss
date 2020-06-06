@@ -1,0 +1,7 @@
+.tab-content {
+  margin: 1rem 0;
+  &__image {
+    min-height: 280px;
+    object-fit: contain;
+  }
+}

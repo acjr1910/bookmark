@@ -3,11 +3,18 @@
   flex-wrap: wrap;
   align-items: center;
   &__item {
+    // Default State
     flex-basis: 100%;
     text-align: center;
     padding: 0.895rem 0;
     color: $very-dark-blue;
     border-bottom: 1px solid $grayish-blue-menu-alpha;
+    transition: all 1s ease;
+    &:after {
+      content: '';
+      width: 0;
+      transition: width 0.4s ease;
+    }
     &:first-child {
       border-top: 1px solid $grayish-blue-menu-alpha;
     }
@@ -15,6 +22,7 @@
       border-bottom: 1px solid $grayish-blue-menu-alpha;
     }
 
+    // Active State
     &--active {
       position: relative;
     }
@@ -28,12 +36,5 @@
       background-color: $soft-red;
       transform: translate3d(-50%, 0px, 0px);
     }
-  }
-}
-
-.tab-content {
-  &__image {
-    min-height: 280px;
-    object-fit: contain;
   }
 }
