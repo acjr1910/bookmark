@@ -10,6 +10,7 @@ module.exports = {
   devServer: {
     open: 'http://localhost:3000',
     port: 9000,
+    stats: 'minimal',
   },
   module: {
     rules: [
