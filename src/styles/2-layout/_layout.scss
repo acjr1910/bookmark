@@ -1,4 +1,5 @@
 @import './l-grid/l-grid';
+@import './l-flex/l-flex';
 @import './hero/hero';
 @import './tab-content/tab-content';
 
@@ -7,5 +8,9 @@
 }
 
 .main {
+  grid-column: 1 / -1;
+}
+
+.fiiter {
   grid-column: 1 / -1;
 }

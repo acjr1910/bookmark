@@ -3,6 +3,7 @@ $soft-blue: hsl(231, 69%, 60%);
 $soft-red: hsl(0, 94%, 66%);
 $grayish-blue: hsl(229, 8%, 60%);
 $very-dark-blue: hsl(229, 31%, 21%);
+$dotted-line-color: #d0d0d0;
 
 // Alpha
 $very-dark-blue-menu-alpha: hsl(229, 31%, 21%, 0.95);
@@ -11,6 +12,9 @@ $grayish-blue-menu-alpha: hsl(229, 8%, 60%, 0.27);
 // Shadows
 $shadow-props: 0px 5px 10px -6px;
 $button-shadow: hsl(231, 69%, 60%, 0.65);
+
+$card-shadow-props: 0px 16px 20px -2px;
+$card-shadow-color: hsl(231, 69%, 60%, 0.15);
 
 // Screen Sizes
 $screen-tablet: 768px;

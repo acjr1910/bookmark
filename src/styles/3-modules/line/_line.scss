@@ -1,0 +1,11 @@
+.line {
+  width: 100%;
+  height: 0px;
+  margin-bottom: 1.8rem;
+}
+.line.dotted:after {
+  content: '............................';
+  letter-spacing: 9px;
+  font-size: 22px;
+  color: $dotted-line-color;
+}

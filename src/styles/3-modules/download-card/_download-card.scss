@@ -1,0 +1,15 @@
+.download-card {
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 5px;
+  padding: 2rem 0 1rem;
+  margin: 2rem 1rem;
+  box-shadow: $card-shadow-props $card-shadow-color;
+  .l-flex-basis-100 {
+    justify-content: center;
+  }
+  img {
+    margin-bottom: 1rem;
+  }
+}

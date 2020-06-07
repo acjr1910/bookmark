@@ -9,7 +9,7 @@
     padding: 0.895rem 0;
     color: $very-dark-blue;
     border-bottom: 1px solid $grayish-blue-menu-alpha;
-    transition: all 1s ease;
+    transition: width 1s ease;
     &:after {
       content: '';
       width: 0;
