@@ -8,6 +8,6 @@ import tabs from './modules/tabs/tabs';
 import styles from '../styles/index.scss';
 
 window.addEventListener('DOMContentLoaded', function (e) {
-  menu;
-  tabs;
+  menu();
+  tabs();
 });

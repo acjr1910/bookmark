@@ -1,4 +1,4 @@
-const menu = (function menuBehavior() {
+const menu = function menuBehavior() {
   const state = {
     isOpen: false,
   };
@@ -7,13 +7,13 @@ const menu = (function menuBehavior() {
 
   function changeMenuIconSrc() {
     const src = state.isOpen
-      ? 'images/icon-hamburger.svg'
-      : 'images/icon-close.svg';
+      ? 'images/icon-close.svg'
+      : 'images/icon-hamburger.svg';
     return menuElement && (menuElement.attributes.src.value = src);
   }
 
   function toggleClass() {
-    const elementClass = state.isOpen ? 'header' : 'header header--show-menu';
+    const elementClass = state.isOpen ? 'header header--show-menu' : 'header';
     return headerElement && (headerElement.classList.value = elementClass);
   }
 
@@ -33,6 +33,6 @@ const menu = (function menuBehavior() {
   }
 
   return initModule();
-})();
+};
 
 export default menu;
