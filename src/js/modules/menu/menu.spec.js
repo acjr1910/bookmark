@@ -14,11 +14,10 @@ function createMenuElement() {
 }
 
 describe('menu.js', function () {
-  it('should toggle menu on click', function () {
-    window.document.body.append(createMenuElement(), createHeaderElement());
+  window.document.body.append(createMenuElement(), createHeaderElement());
+  menu();
 
-    menu();
-
+  it('should toggle header class on menu click', function () {
     const menuElement = document.querySelector('.header__menu-image');
 
     menuElement.click();
@@ -28,5 +27,15 @@ describe('menu.js', function () {
 
     menuElement.click();
     expect(document.querySelector('.header').classList.value).toBe('header');
+  });
+
+  it('should change menu src image src on click', function () {
+    const menuElement = document.querySelector('.header__menu-image');
+
+    menuElement.click();
+    expect(menuElement.attributes.src.value).toBe('images/icon-close.svg');
+
+    menuElement.click();
+    expect(menuElement.attributes.src.value).toBe('images/icon-hamburger.svg');
   });
 });
