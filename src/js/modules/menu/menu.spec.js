@@ -1,42 +1,32 @@
-import menu from './menu';
-
-const HeaderElement = (function () {
-  const element = document.createElement('header');
-  element.setAttribute('class', 'header');
-  return element;
-})();
-
-const MenuElement = (function () {
-  const element = document.createElement('img');
-  element.setAttribute('class', 'header__menu-image');
-  element.setAttribute('src', 'images/icon-hamburger.svg');
-  return element;
-})();
-
 describe('menu.js', function () {
-  window.document.body.append(HeaderElement);
-  document.querySelector('.header').append(MenuElement);
-  const menuElement = document.querySelector('.header__menu-image');
+  document &&
+    (document.body.innerHTML =
+      '<header class="header">' +
+      '<img class="header__menu-image" src="images/icon-hamburger.svg" />' +
+      '</header>');
 
-  menu.init();
+  const menu = require('./menu.js');
+  menu.default.init();
+
+  const menuElem = document.querySelector('.header__menu-image');
 
   it('should toggle header class on menu click', function () {
     expect(document.querySelector('.header--show-menu')).toBeNull();
 
-    menuElement.click();
-    expect(document.querySelector('.header--show-menu')).toBeDefined();
+    menuElem.click();
+    expect(document.querySelector('.header--show-menu')).not.toBeNull();
 
-    menuElement.click();
+    menuElem.click();
     expect(document.querySelector('.header--show-menu')).toBeNull();
   });
 
   it('should toggle menu src image src on click', function () {
-    expect(menuElement).toBeDefined();
+    expect(menuElem).toBeDefined();
 
-    menuElement.click();
-    expect(menuElement.attributes.src.value).toBe('images/icon-close.svg');
+    menuElem.click();
+    expect(menuElem.attributes.src.value).toBe('images/icon-close.svg');
 
-    menuElement.click();
-    expect(menuElement.attributes.src.value).toBe('images/icon-hamburger.svg');
+    menuElem.click();
+    expect(menuElem.attributes.src.value).toBe('images/icon-hamburger.svg');
   });
 });
