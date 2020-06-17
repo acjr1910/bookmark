@@ -1,36 +1,37 @@
 import menu from './menu';
 
-function createHeaderElement() {
+const HeaderElement = (function () {
   const element = document.createElement('header');
   element.setAttribute('class', 'header');
   return element;
-}
+})();
 
-function createMenuElement() {
+const MenuElement = (function () {
   const element = document.createElement('img');
   element.setAttribute('class', 'header__menu-image');
   element.setAttribute('src', 'images/icon-hamburger.svg');
   return element;
-}
+})();
 
 describe('menu.js', function () {
-  window.document.body.append(createMenuElement(), createHeaderElement());
-  menu();
+  window.document.body.append(HeaderElement);
+  document.querySelector('.header').append(MenuElement);
+  const menuElement = document.querySelector('.header__menu-image');
+
+  menu.init();
 
   it('should toggle header class on menu click', function () {
-    const menuElement = document.querySelector('.header__menu-image');
+    expect(document.querySelector('.header--show-menu')).toBeNull();
 
     menuElement.click();
-    expect(document.querySelector('.header').classList.value).toBe(
-      'header header--show-menu'
-    );
+    expect(document.querySelector('.header--show-menu')).toBeDefined();
 
     menuElement.click();
-    expect(document.querySelector('.header').classList.value).toBe('header');
+    expect(document.querySelector('.header--show-menu')).toBeNull();
   });
 
-  it('should change menu src image src on click', function () {
-    const menuElement = document.querySelector('.header__menu-image');
+  it('should toggle menu src image src on click', function () {
+    expect(menuElement).toBeDefined();
 
     menuElement.click();
     expect(menuElement.attributes.src.value).toBe('images/icon-close.svg');

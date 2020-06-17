@@ -1,6 +1,4 @@
-const tabs = function menuBehavior() {
-  require('../../../images/illustration-features-tab-1.svg');
-
+const tabs = (function menuBehavior() {
   const tabList = document.querySelectorAll('.tabs__item');
 
   // @param { arrList } <NodeList>;
@@ -56,11 +54,13 @@ const tabs = function menuBehavior() {
     });
   }
 
-  function initModule() {
+  function init() {
     addClickListener();
   }
 
-  return initModule();
-};
+  return {
+    init,
+  };
+})();
 
 export default tabs;

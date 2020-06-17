@@ -1,4 +1,4 @@
-const menu = function menuBehavior() {
+const menu = (function menuBehavior() {
   const state = {
     isOpen: false,
   };
@@ -28,11 +28,13 @@ const menu = function menuBehavior() {
     return menuElement && menuElement.addEventListener('click', toggleIsOpen);
   }
 
-  function initModule() {
+  function init() {
     addClickListener();
   }
 
-  return initModule();
-};
+  return {
+    init,
+  };
+})();
 
 export default menu;
