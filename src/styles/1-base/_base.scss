@@ -10,6 +10,11 @@ html {
   box-sizing: inherit;
 }
 
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 body,
 h1,
 h2,

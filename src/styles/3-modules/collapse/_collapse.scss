@@ -1,0 +1,33 @@
+.collapse {
+  &__item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+    color: $very-dark-blue;
+    border-bottom: 1px solid $gray;
+    padding: 1.2rem 0;
+    cursor: pointer;
+    transition: transform 1s ease;
+  }
+  &__item--show &__content {
+    display: flex;
+    height: auto;
+    transition: height 3s ease;
+  }
+  &__title {
+    margin: 0;
+    font-size: 0.85rem;
+    font-weight: normal;
+  }
+  &__content {
+    display: none;
+    width: 100%;
+    height: 0;
+    transition: height 3s ease;
+  }
+  &__paragraph {
+    text-align: left;
+  }
+}
