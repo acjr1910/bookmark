@@ -6,7 +6,6 @@ const collapse = (function () {
 
   function toggleClass(item) {
     item.classList.toggle(showClass);
-    console.log(item.classList);
   }
 
   function applyBehavior() {

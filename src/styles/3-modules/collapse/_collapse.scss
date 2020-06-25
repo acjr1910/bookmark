@@ -9,12 +9,16 @@
     border-bottom: 1px solid $gray;
     padding: 1.2rem 0;
     cursor: pointer;
-    transition: transform 1s ease;
+  }
+  .arrow-icon {
+    transition: transform 0.2s linear;
+  }
+  &__item--show .arrow-icon {
+    transform: rotate(180deg);
+    transition: transform 0.2s linear;
   }
   &__item--show &__content {
     display: flex;
-    height: auto;
-    transition: height 3s ease;
   }
   &__title {
     margin: 0;
@@ -24,8 +28,6 @@
   &__content {
     display: none;
     width: 100%;
-    height: 0;
-    transition: height 3s ease;
   }
   &__paragraph {
     text-align: left;
